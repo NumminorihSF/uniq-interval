@@ -1,6 +1,6 @@
 {
   "name": "uniq-interval",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Some unicalization of intervals on application",
   "main": "build/index.js",
   "scripts": {

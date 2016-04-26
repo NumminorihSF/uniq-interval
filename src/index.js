@@ -6,7 +6,7 @@ const allWaitersStore = Symbol('allWaitersMap');
 const identifier = Symbol('identifier');
 
 class Timer {
-  static setInterval(cb, interval, ...args) {
+  static setInterval(cb, int, ...args) {
     if (!Timer[waitersMap].has(int)) {
       Timer[waitersMap].set(int, new SmallInterval(int));
     }
