@@ -16,6 +16,7 @@ class Timer {
     let id = Timer[identifier]++;
     Timer[waitersMap].get(int).addWaiter(waiter);
     Timer[allWaitersStore].set(id, {interval: int, waiter: waiter});
+    return id;
   }
 
   static clearInterval(id) {
