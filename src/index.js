@@ -40,3 +40,6 @@ Timer[identifier] = 1;
 
 
 export default Timer;
+if (typeof module !== 'undefined') {
+  module.exports = Timer;
+}
