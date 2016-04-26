@@ -60,40 +60,6 @@ It returning id of interval to use with `interval#clearInterval()`.
 This method provide same api as `windowTimer#clearInterval()` in browser or `Timers#clearInterval()` in node.js.
 
 
-## Configurating
-
-`uniqRequest` waits 2 parameters:
-
-`var uniqRequest = require('uniq-request')(options, uniqStringCalc);`
-
-`options` is an object, that provides paths for transport data from and into request, response objects.
-
-`uniqStringCalc` is a function that should calculate some string to make request uniq. By default it is:
-
-```
-function(req, res){
-  return req.method+':'+req.originalPath;
-};
-```
-
-If `uniqStringCalc` has 3 arguments, this function can be async, than 3rd argument will be an callback function.
-First arg on callback function is an error object. Second should be a string to unify request.
-
-### Options
-
-
-Options is an Object with unnecessary fields:
-
-* `.source` _String_ - Path on object, were output data exist. Default: `'res.locals'`. It means, 
-that module will get `res.locals` and try to returning it as result after some work.
-  * You can use `'req'` or `'request'` as request object link.
-  * You can use `'res'` or `'response'` as response object link.
-  * If no such route in object, module will return error to express.
-* `.dest` _String_ - Path on object, to put result data. Default `'res.locals'`.
-  * Linking to object is like on `.source`
-  * If no such route in object, module will create it.
-
-
 
 ## LICENSE - "MIT License"
 
